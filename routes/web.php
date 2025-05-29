@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\Productcontroller;
+use App\Http\Controllers\Homecontroller;
 use Livewire\Volt\Volt;
 
 // Route::get('/', function () {
@@ -21,6 +24,30 @@ use Livewire\Volt\Volt;
 
 // require __DIR__.'/auth.php';
 
+Route::get('/', function () {
+    if (!session()->has('user')) {
+        return redirect('/login');
+    }
+    return 'Welcome to your dashboard!';
+});
 
-Route::view("/", "login");
+// Route::view("/", "login");
+
+
+Route::post('login', [UserController::class, 'login']);
+
+
+Route::get('/', [Productcontroller::class, 'index']);
+
+
+// Route::get('/login', function () {
+//     // Your login logic
+// })->middleware('userauth');
+
+
+Route::get('/check-session', function () {
+    return session('user'); // Should return the user ID
+});
+
+
 

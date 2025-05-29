@@ -23,6 +23,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
 <!-- <script>
+    document.querySelector('form').addEventListener('submit', function() {
+        const btn = this.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.querySelector('.spinner-border').classList.remove('d-none');
+        btn.querySelector('span:last-child').textContent = 'Logging in...';
+    });
+</script> -->
+
+<!-- <script>
     $(document).ready(function() {
         $("button").click(function() {
             alert('all set');
@@ -32,9 +41,10 @@
 </script> -->
 
 <style>
-    .custom-login{
-        height : 500px;
+    .custom-login {
+        height: 500px;
         padding-top: 100px;
     }
 </style>
+
 </html>
