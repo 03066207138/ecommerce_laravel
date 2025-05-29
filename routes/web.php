@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\productcontroller;
 use App\Http\Controllers\HomeController;
 use Livewire\Volt\Volt;
 
@@ -36,7 +36,7 @@ Route::get('/login', function () {
 Route::post('login', [UserController::class, 'login']);
 
 
-Route::get('/', [Productcontroller::class, 'index']);
+Route::get('/', [productcontroller::class, 'index']);
 
 
 // Route::get('/login', function () {
