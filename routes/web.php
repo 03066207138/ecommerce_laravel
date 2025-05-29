@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Usercontroller;
-use App\Http\Controllers\Productcontroller;
-use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 use Livewire\Volt\Volt;
 
 Route::get('/login', function () {
