@@ -6,10 +6,9 @@ use App\Http\Controllers\Productcontroller;
 use App\Http\Controllers\Homecontroller;
 use Livewire\Volt\Volt;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
-
+Route::get('/login', function () {
+    return view('login');
+});
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');
@@ -24,12 +23,12 @@ use Livewire\Volt\Volt;
 
 // require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    if (!session()->has('user')) {
-        return redirect('/login');
-    }
-    return 'Welcome to your dashboard!';
-});
+// Route::get('/', function () {
+//     if (!session()->has('user')) {
+//         return redirect('/login');
+//     }
+//     return 'Welcome to your dashboard!';
+// });
 
 // Route::view("/", "login");
 
